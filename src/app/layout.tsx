@@ -1,8 +1,21 @@
 import type { Metadata } from 'next'
+import { Fraunces, Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import LenisProvider from '@/components/layout/LenisProvider'
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://cee.co.in',
+    url: 'https://theceecompany.com',
     siteName: 'Creative Entertainment Enterprises',
     title: 'Creative Entertainment Enterprises | CEE',
     description:
@@ -46,15 +59,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en-GB" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html lang="en-GB" suppressHydrationWarning className={`${fraunces.variable} ${inter.variable}`}>
       <body className="bg-base text-white font-body antialiased">
         <LenisProvider>
           <Navigation />
