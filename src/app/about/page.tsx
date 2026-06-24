@@ -1,0 +1,212 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import { houses } from '@/data/houses'
+import { team } from '@/data/team'
+
+export const metadata: Metadata = {
+  title: 'About CEE | Creative Entertainment Enterprises',
+  description:
+    'The story behind Creative Entertainment Enterprises Pvt Ltd. One legal entity. Four operating houses. Built to take human potential further.',
+}
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section
+        className="pt-36 pb-24 border-b border-white/5"
+        aria-label="About CEE"
+      >
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/30 mb-6">
+            About CEE
+          </p>
+          <h1 className="font-display text-5xl md:text-7xl font-black text-white leading-none mb-8">
+            One entity.<br />Four houses.
+          </h1>
+          <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
+            Creative Entertainment Enterprises Pvt Ltd was built on a single conviction:
+            that talent, brand growth, commerce and intelligence are not separate
+            problems. They are one problem, and they deserve one roof.
+          </p>
+        </div>
+      </section>
+
+      {/* Origin */}
+      <section className="py-24 border-b border-white/5" aria-label="Our origin">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-bombay mb-4">
+                Origin
+              </p>
+              <h2 className="font-display text-3xl md:text-4xl font-black text-white mb-6">
+                Why we built it this way.
+              </h2>
+            </div>
+            <div className="space-y-5">
+              <p className="text-white/60 leading-relaxed">
+                Most entertainment and marketing businesses are built for one lane.
+                A talent agency that cannot advise on brand strategy. A marketing
+                consultancy that has never negotiated a celebrity contract. A
+                commerce business that does not understand the mechanics of fame.
+              </p>
+              <p className="text-white/60 leading-relaxed">
+                CEE was designed from day one to hold all four. Not as a
+                conglomerate, but as an integrated operating system where insight
+                from one house makes every other house smarter.
+              </p>
+              <p className="text-white/60 leading-relaxed">
+                We are a private limited company headquartered in India. We work
+                across entertainment, consumer, technology and professional
+                services sectors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Four houses diagram */}
+      <section className="py-24 border-b border-white/5" aria-label="The four houses">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/30 mb-4">
+              Structure
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl font-black text-white">
+              Four houses. One parent.
+            </h2>
+          </div>
+
+          {/* CEE centre node */}
+          <div className="flex flex-col items-center gap-8">
+            <div className="border border-white/15 px-8 py-4 text-center">
+              <p className="font-display text-2xl font-black text-white">CEE</p>
+              <p className="text-white/40 text-xs mt-1">
+                Creative Entertainment Enterprises Pvt Ltd
+              </p>
+            </div>
+
+            {/* Connector line */}
+            <div className="w-px h-8 bg-white/10" aria-hidden="true" />
+
+            {/* Houses grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+              {houses.map((house) => (
+                <Link
+                  key={house.id}
+                  href={house.href}
+                  className="group border border-white/5 hover:border-opacity-40 p-6 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.04]"
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = `${house.accentColor}40`
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.05)'
+                  }}
+                  aria-label={`Go to ${house.name}`}
+                >
+                  <div
+                    className="w-8 h-1 mb-5"
+                    style={{ backgroundColor: house.accentColor }}
+                    aria-hidden="true"
+                  />
+                  <h3 className="font-display text-xl font-black text-white mb-1">
+                    {house.name}
+                  </h3>
+                  <p
+                    className="text-xs font-medium mb-4"
+                    style={{ color: house.accentColor }}
+                  >
+                    {house.tagline}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {house.services.slice(0, 3).map((s) => (
+                      <li key={s.title} className="text-xs text-white/40">
+                        {s.title}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex items-center gap-1 mt-6 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    style={{ color: house.accentColor }}
+                  >
+                    Explore
+                    <ArrowRight size={12} aria-hidden="true" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="py-24 border-b border-white/5" aria-label="Leadership team">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-14">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/30 mb-3">
+              Leadership
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-black text-white">
+              The team behind CEE.
+            </h2>
+            {/* PLACEHOLDER: replace stub entries with real names, photos and bios */}
+            <p className="text-white/30 text-sm mt-3">
+              Leadership profiles coming soon.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {team.map((member, i) => {
+              const house = houses.find((h) => h.id === member.house)
+              return (
+                <div
+                  key={i}
+                  className="p-8 border border-white/5 bg-white/[0.02]"
+                >
+                  {/* PLACEHOLDER: replace with actual headshot via <Image> */}
+                  <div
+                    className="w-16 h-16 rounded-sm bg-white/5 mb-5 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <span className="text-white/20 text-xs">Photo</span>
+                  </div>
+                  <h3 className="font-semibold text-white mb-1">{member.name}</h3>
+                  <p
+                    className="text-xs font-medium mb-3"
+                    style={{ color: house ? house.accentColor : '#ffffff60' }}
+                  >
+                    {member.role}
+                  </p>
+                  <p className="text-white/40 text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24" aria-label="Contact CEE">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-6">
+            Work with CEE.
+          </h2>
+          <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
+            Tell us which house you need and we will put the right people in
+            the room.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-bombay text-base px-8 py-4 text-sm font-semibold transition-all duration-200 hover:bg-bombay-light group"
+          >
+            Get in touch
+            <ArrowRight size={16} className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+          </Link>
+        </div>
+      </section>
+    </>
+  )
+}
