@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { houses } from '@/data/houses'
-import { team } from '@/data/team'
 import HouseDiagram from '@/components/about/HouseDiagram'
 
 export const metadata: Metadata = {
@@ -81,54 +80,6 @@ export default function AboutPage() {
           </div>
 
           <HouseDiagram houses={houses} />
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-24 border-b border-white/5" aria-label="Leadership team">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/30 mb-3">
-              Leadership
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-black text-white">
-              The team behind CEE.
-            </h2>
-            {/* PLACEHOLDER: replace stub entries with real names, photos and bios */}
-            <p className="text-white/30 text-sm mt-3">
-              Leadership profiles coming soon.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {team.map((member, i) => {
-              const house = houses.find((h) => h.id === member.house)
-              return (
-                <div
-                  key={i}
-                  className="p-8 border border-white/5 bg-white/[0.02]"
-                >
-                  {/* PLACEHOLDER: replace with actual headshot via <Image> */}
-                  <div
-                    className="w-16 h-16 rounded-sm bg-white/5 mb-5 flex items-center justify-center"
-                    aria-hidden="true"
-                  >
-                    <span className="text-white/20 text-xs">Photo</span>
-                  </div>
-                  <h3 className="font-semibold text-white mb-1">{member.name}</h3>
-                  <p
-                    className="text-xs font-medium mb-3"
-                    style={{ color: house ? house.accentColor : '#ffffff60' }}
-                  >
-                    {member.role}
-                  </p>
-                  <p className="text-white/40 text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
         </div>
       </section>
 

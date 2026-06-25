@@ -6,6 +6,7 @@ export type House = {
   accentColor: string
   accentClass: string
   href: string
+  externalHref: string
   services: Service[]
   icp: ICPEntry[]
   stats: Stat[]
@@ -34,9 +35,10 @@ export const houses: House[] = [
     tagline: 'Talent and Entertainment House',
     description:
       'We represent the people who move culture. From emerging voices to established names, Bombay Dreams connects talent with the brands, stages and audiences they deserve.',
-    accentColor: '#D4AF37',
+    accentColor: '#a48333',
     accentClass: 'bombay',
     href: '/bombay-dreams',
+    externalHref: 'https://www.bombaydreams.co.in/',
     services: [
       {
         title: 'Talent Management',
@@ -92,9 +94,10 @@ export const houses: House[] = [
     tagline: 'Growth and Marketing House',
     description:
       'Growth without guesswork. Brandoscopy brings together marketing strategy, demand generation and revenue operations to build systems that compound over time.',
-    accentColor: '#00D9D4',
+    accentColor: '#5f101c',
     accentClass: 'brandoscopy',
     href: '/brandoscopy',
+    externalHref: 'https://www.brandoscopy.in/',
     services: [
       {
         title: 'Marketing Consulting',
@@ -156,9 +159,10 @@ export const houses: House[] = [
     tagline: 'Commerce and IP House',
     description:
       'Where intellectual property becomes product. Labl.co turns celebrity equity, cultural moments and emerging IP into commerce businesses with real staying power.',
-    accentColor: '#FF4D6D',
+    accentColor: '#b28442',
     accentClass: 'labl',
     href: '/labl-co',
+    externalHref: 'https://labl.co.in/',
     services: [
       {
         title: 'Celebrity Brands',
@@ -214,9 +218,10 @@ export const houses: House[] = [
     tagline: 'AI and Future Skills House',
     description:
       'AI that works for people. H²AI Technologies helps organisations understand, deploy and benefit from artificial intelligence — with a commitment to human-first principles throughout.',
-    accentColor: '#7C5CFF',
+    accentColor: '#3c82f5',
     accentClass: 'h2ai',
     href: '/h2ai-technologies',
+    externalHref: 'https://www.humantothepowerofai.com/',
     services: [
       {
         title: 'AI Education and Training',

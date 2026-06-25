@@ -70,6 +70,8 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
                     className={cn(
                       'relative text-sm font-medium transition-colors duration-200 group',
                       isActive ? 'text-white' : 'text-white/60 hover:text-white'
@@ -173,6 +175,8 @@ export default function Navigation() {
                   >
                     <Link
                       href={item.href}
+                      target={item.external ? '_blank' : undefined}
+                      rel={item.external ? 'noopener noreferrer' : undefined}
                       className={cn(
                         'block font-display text-3xl font-bold transition-colors duration-200',
                         pathname === item.href

@@ -36,8 +36,9 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
                     className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-                    style={item.accentColor ? { '--accent': item.accentColor } as React.CSSProperties : undefined}
                   >
                     {item.label}
                   </Link>

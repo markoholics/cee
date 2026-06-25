@@ -4,10 +4,10 @@
 
 :root {
   --color-base: #0A0A0B;
-  --color-bombay: #D4AF37;
-  --color-brandoscopy: #00D9D4;
-  --color-labl: #FF4D6D;
-  --color-h2ai: #7C5CFF;
+  --color-bombay: #a48333;
+  --color-brandoscopy: #5f101c;
+  --color-labl: #b28442;
+  --color-h2ai: #3c82f5;
 }
 
 * {
@@ -99,38 +99,38 @@ html.lenis {
 
 /* Gradient text */
 .text-gradient-bombay {
-  background: linear-gradient(135deg, #D4AF37, #E8C85A);
+  background: linear-gradient(135deg, #a48333, #c4a34e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-brandoscopy {
-  background: linear-gradient(135deg, #00D9D4, #33E4E0);
+  background: linear-gradient(135deg, #5f101c, #8a1a2a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-labl {
-  background: linear-gradient(135deg, #FF4D6D, #FF7A93);
+  background: linear-gradient(135deg, #b28442, #c99e5e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-h2ai {
-  background: linear-gradient(135deg, #7C5CFF, #9E84FF);
+  background: linear-gradient(135deg, #3c82f5, #6ba0f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* House border utility */
-.border-house-bombay { border-color: #D4AF37; }
-.border-house-brandoscopy { border-color: #00D9D4; }
-.border-house-labl { border-color: #FF4D6D; }
-.border-house-h2ai { border-color: #7C5CFF; }
+.border-house-bombay { border-color: #a48333; }
+.border-house-brandoscopy { border-color: #5f101c; }
+.border-house-labl { border-color: #b28442; }
+.border-house-h2ai { border-color: #3c82f5; }
 
 /* Horizontal scroll container */
 .hide-scrollbar {
