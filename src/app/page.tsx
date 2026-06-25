@@ -4,7 +4,6 @@ import HouseShowcase from '@/components/home/HouseShowcase'
 import MomentsRail from '@/components/home/MomentsRail'
 import ConvictionQuote from '@/components/home/ConvictionQuote'
 import ProofSection from '@/components/home/ProofSection'
-import PartnerMarquee from '@/components/home/PartnerMarquee'
 import HomeCTA from '@/components/home/HomeCTA'
 
 export const metadata: Metadata = {
@@ -44,8 +43,7 @@ export default function HomePage() {
       <ConvictionQuote />
       <MomentsRail />
       <ProofSection />
-      <PartnerMarquee />
-      <HomeCTA />
+<HomeCTA />
     </>
   )
 }
