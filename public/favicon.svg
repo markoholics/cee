@@ -1,0 +1,25 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="#0A0A0B"/>
+  <!-- Outer thick ring -->
+  <circle cx="250" cy="250" r="228" fill="none" stroke="white" stroke-width="44"/>
+  <!-- Inner thin ring -->
+  <circle cx="250" cy="250" r="192" fill="none" stroke="white" stroke-width="7"/>
+  <!-- Side ear tabs -->
+  <rect x="4" y="207" width="20" height="86" fill="white"/>
+  <rect x="476" y="207" width="20" height="86" fill="white"/>
+  <!-- Banner fill -->
+  <rect x="20" y="207" width="460" height="86" fill="white"/>
+  <!-- Banner inner cutout -->
+  <rect x="29" y="215" width="442" height="70" fill="#0A0A0B"/>
+  <!-- Text -->
+  <text
+    x="250" y="252"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial Black, Arial, sans-serif"
+    font-size="38"
+    font-weight="900"
+    letter-spacing="6"
+    fill="white"
+  >THE CEE COMPANY</text>
+</svg>

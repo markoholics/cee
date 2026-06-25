@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { navItems } from '@/data/navigation'
 import { cn } from '@/lib/utils'
+import LogoMark from '@/components/ui/LogoMark'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
@@ -56,10 +57,10 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display font-black text-2xl tracking-tight text-white hover:opacity-80 transition-opacity"
-            aria-label="CEE — Creative Entertainment Enterprises, go to homepage"
+            className="hover:opacity-80 transition-opacity flex-shrink-0"
+            aria-label="The CEE Company — go to homepage"
           >
-            CEE
+            <LogoMark size={64} />
           </Link>
 
           {/* Desktop nav */}
@@ -149,10 +150,11 @@ export default function Navigation() {
             <div className="flex items-center justify-between px-6 py-5">
               <Link
                 href="/"
-                className="font-display font-black text-2xl tracking-tight text-white"
+                className="hover:opacity-80 transition-opacity"
                 onClick={() => setMobileOpen(false)}
+                aria-label="The CEE Company — go to homepage"
               >
-                CEE
+                <LogoMark size={56} />
               </Link>
               <button
                 onClick={() => setMobileOpen(false)}

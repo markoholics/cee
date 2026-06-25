@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { navItems } from '@/data/navigation'
+import LogoMark from '@/components/ui/LogoMark'
 
 const houseLinks = navItems.filter((n) => n.isHouse)
 
@@ -15,10 +16,10 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link
               href="/"
-              className="font-display font-black text-3xl text-white block mb-4"
-              aria-label="CEE homepage"
+              className="inline-block mb-5 hover:opacity-80 transition-opacity"
+              aria-label="The CEE Company homepage"
             >
-              CEE
+              <LogoMark size={80} />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Creative Entertainment Enterprises Pvt Ltd. Four Houses. One Dynasty. Built to further human potential.
