@@ -41,25 +41,25 @@ export default function ContactPage() {
                   {
                     name: 'Bombay Dreams',
                     tagline: 'Talent and Entertainment',
-                    color: '#D4AF37',
+                    color: '#a48333',
                     desc: 'Talent management, celebrity partnerships, brand endorsements, events.',
                   },
                   {
                     name: 'Brandoscopy',
                     tagline: 'Growth and Marketing',
-                    color: '#00D9D4',
+                    color: '#5f101c',
                     desc: 'Marketing consulting, demand generation, growth, CRM, RevOps.',
                   },
                   {
                     name: 'Labl.co',
                     tagline: 'Commerce and IP',
-                    color: '#FF4D6D',
+                    color: '#b28442',
                     desc: 'Celebrity brands, product development, licensing, e-commerce.',
                   },
                   {
                     name: 'H²AI Technologies',
                     tagline: 'AI and Future Skills',
-                    color: '#7C5CFF',
+                    color: '#3c82f5',
                     desc: 'AI education, consulting, workshops, certifications, strategy.',
                   },
                 ].map((h) => (
