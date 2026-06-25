@@ -152,7 +152,7 @@ export default function LegalPage() {
                 These terms are governed by the laws of India. Any disputes
                 shall be subject to the exclusive jurisdiction of courts in
                 {/* PLACEHOLDER: insert jurisdiction city */}
-                {' '}<span className="text-white/40">[city to be confirmed]</span>.
+                  {' '}<span className="text-white">India</span>.
               </p>
             </div>
 

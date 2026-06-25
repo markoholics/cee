@@ -21,8 +21,7 @@ export default function Footer() {
               CEE
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Creative Entertainment Enterprises Pvt Ltd. One entity. Four
-              operating houses. Built to take human potential further.
+              Creative Entertainment Enterprises Pvt Ltd. Four Houses. One Dynasty. Built to further human potential.
             </p>
           </div>
 

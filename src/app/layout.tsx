@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: 'Creative Entertainment Enterprises',
     title: 'Creative Entertainment Enterprises | CEE',
     description:
-      'One legal entity. Four operating houses. Built to take human potential further.',
+      'One legal entity. Four operating houses. Built to further human potential.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Creative Entertainment Enterprises | CEE',
     description:
-      'One legal entity. Four operating houses. Built to take human potential further.',
+      'One legal entity. Four operating houses. Built to further human potential.',
   },
   robots: {
     index: true,

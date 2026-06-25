@@ -7,7 +7,7 @@ import HouseDiagram from '@/components/about/HouseDiagram'
 export const metadata: Metadata = {
   title: 'About CEE | Creative Entertainment Enterprises',
   description:
-    'The story behind Creative Entertainment Enterprises Pvt Ltd. One legal entity. Four operating houses. Built to take human potential further.',
+    'The story behind Creative Entertainment Enterprises Pvt Ltd. Four Houses. One Dynasty. Built to further human potential.',
 }
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
             About CEE
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-black text-white leading-none mb-8">
-            One entity.<br />Four houses.
+            Four Houses.<br />One Dynasty.
           </h1>
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
             Creative Entertainment Enterprises Pvt Ltd was built on a single conviction:
@@ -75,7 +75,7 @@ export default function AboutPage() {
               Structure
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-black text-white">
-              Four houses. One parent.
+              Four Houses. One Dynasty.
             </h2>
           </div>
 

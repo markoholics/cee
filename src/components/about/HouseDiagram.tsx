@@ -12,6 +12,7 @@ interface House {
   id: string
   name: string
   href: string
+  externalHref: string
   accentColor: string
   tagline: string
   services: Service[]
@@ -33,7 +34,9 @@ export default function HouseDiagram({ houses }: { houses: House[] }) {
         {houses.map((house) => (
           <Link
             key={house.id}
-            href={house.href}
+            href={house.externalHref}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group border border-white/5 p-6 transition-all duration-300 bg-white/[0.02] hover:bg-white/[0.04]"
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = `${house.accentColor}40`
@@ -41,7 +44,7 @@ export default function HouseDiagram({ houses }: { houses: House[] }) {
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)'
             }}
-            aria-label={`Go to ${house.name}`}
+            aria-label={`Explore ${house.name} (opens external site)`}
           >
             <div
               className="w-8 h-1 mb-5"
@@ -65,7 +68,7 @@ export default function HouseDiagram({ houses }: { houses: House[] }) {
               className="flex items-center gap-1 mt-6 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               style={{ color: house.accentColor }}
             >
-              Explore
+              Explore {house.name}
               <ArrowRight size={12} aria-hidden="true" />
             </div>
           </Link>

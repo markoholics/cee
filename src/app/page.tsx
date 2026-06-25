@@ -10,7 +10,7 @@ import HomeCTA from '@/components/home/HomeCTA'
 export const metadata: Metadata = {
   title: 'Creative Entertainment Enterprises | Talent. Brands. Commerce. Intelligence.',
   description:
-    'CEE is one legal entity with four operating houses: Bombay Dreams (talent), Brandoscopy (growth), Labl.co (commerce) and H²AI Technologies (AI). Built to take human potential further.',
+    'CEE — Four Houses. One Dynasty. Bombay Dreams (talent), Brandoscopy (growth), Labl.co (commerce) and H²AI Technologies (AI). Built to further human potential.',
 }
 
 export default function HomePage() {
@@ -23,7 +23,7 @@ export default function HomePage() {
       >
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-white/30 mb-8">
-            One entity. Four houses.
+            Four Houses. One Dynasty.
           </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold leading-snug text-white/90 max-w-3xl">
             Creative Entertainment Enterprises Pvt Ltd is the single legal and

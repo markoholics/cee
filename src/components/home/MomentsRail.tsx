@@ -6,67 +6,59 @@ import { motion, useReducedMotion } from 'framer-motion'
 const moments = [
   {
     id: 1,
-    label: 'Talent Launch',
+    label: 'Campaign Launch',
     caption: 'A debut album campaign reaching 12 million listeners in week one.',
     house: 'Bombay Dreams',
-    houseColor: '#D4AF37',
-    offset: 0,
+    houseColor: '#a48333',
   },
   {
     id: 2,
     label: 'Brand Sprint',
     caption: 'Six weeks from brief to pipeline. Three times the qualified leads.',
     house: 'Brandoscopy',
-    houseColor: '#00D9D4',
-    offset: -32,
+    houseColor: '#5f101c',
   },
   {
     id: 3,
     label: 'Celebrity Brand Launch',
     caption: 'A lifestyle brand built on talent equity. Sold out in 72 hours.',
     house: 'Labl.co',
-    houseColor: '#FF4D6D',
-    offset: 24,
+    houseColor: '#b28442',
   },
   {
     id: 4,
     label: 'AI Workshop',
     caption: '200 executives. One day. Measurable shifts in AI confidence scores.',
     house: 'H²AI Technologies',
-    houseColor: '#7C5CFF',
-    offset: -16,
+    houseColor: '#3c82f5',
   },
   {
     id: 5,
-    label: 'Live Experience',
-    caption: 'A stadium activation that became the most shared moment of the season.',
-    house: 'Bombay Dreams',
-    houseColor: '#D4AF37',
-    offset: 16,
-  },
-  {
-    id: 6,
     label: 'CRM Overhaul',
     caption: 'Lifecycle revenue up 40% in the first quarter after relaunch.',
     house: 'Brandoscopy',
-    houseColor: '#00D9D4',
-    offset: -24,
+    houseColor: '#5f101c',
   },
   {
-    id: 7,
+    id: 6,
     label: 'Licensing Deal',
     caption: 'IP extended into three new product categories without dilution.',
     house: 'Labl.co',
-    houseColor: '#FF4D6D',
-    offset: 8,
+    houseColor: '#b28442',
   },
   {
-    id: 8,
+    id: 7,
     label: 'AI Strategy',
     caption: 'Board-ready AI roadmap. Delivered in three weeks. Approved in one.',
     house: 'H²AI Technologies',
-    houseColor: '#7C5CFF',
-    offset: -8,
+    houseColor: '#3c82f5',
+  },
+  {
+    id: 8,
+    label: 'Campaign Launch',
+    caption: 'An endorsement deal that tripled brand recall among 18-34 audiences.',
+    house: 'Bombay Dreams',
+    houseColor: '#a48333',
   },
 ]
 
@@ -85,10 +77,10 @@ export default function MomentsRail() {
         </h2>
       </div>
 
-      {/* Horizontal scroll container */}
+      {/* Horizontal scroll container — all cards uniform height */}
       <div
         ref={scrollRef}
-        className="flex gap-5 px-6 overflow-x-auto hide-scrollbar pb-4 cursor-grab active:cursor-grabbing"
+        className="flex gap-5 px-6 overflow-x-auto hide-scrollbar pb-4 cursor-grab active:cursor-grabbing items-stretch"
         role="list"
         aria-label="Moments cards"
         onMouseDown={(e) => {
@@ -112,16 +104,13 @@ export default function MomentsRail() {
           <motion.div
             key={moment.id}
             role="listitem"
-            className="flex-shrink-0 w-56 md:w-72 rounded-sm overflow-hidden border border-white/5 bg-white/[0.03] p-6"
-            style={{
-              marginTop: prefersReducedMotion ? 0 : moment.offset,
-            }}
+            className="flex-shrink-0 w-64 md:w-72 rounded-sm border border-white/5 bg-white/[0.03] p-6 flex flex-col"
             whileHover={{ scale: 1.02, borderColor: `${moment.houseColor}40` }}
             transition={{ duration: 0.2 }}
           >
             {/* House badge */}
             <span
-              className="inline-block text-[10px] font-semibold uppercase tracking-widest px-2 py-1 rounded-sm mb-4"
+              className="inline-block text-[10px] font-semibold uppercase tracking-widest px-2 py-1 rounded-sm mb-4 self-start"
               style={{
                 color: moment.houseColor,
                 backgroundColor: `${moment.houseColor}15`,
@@ -135,12 +124,12 @@ export default function MomentsRail() {
               {moment.label}
             </h3>
 
-            {/* Caption */}
-            <p className="text-white/50 text-sm leading-relaxed">
+            {/* Caption — grows to fill remaining space so cards align at bottom */}
+            <p className="text-white/50 text-sm leading-relaxed flex-1">
               {moment.caption}
             </p>
 
-            {/* Colour accent line */}
+            {/* Colour accent line — always at bottom */}
             <div
               className="mt-6 h-px w-12"
               style={{ backgroundColor: moment.houseColor }}
@@ -150,7 +139,6 @@ export default function MomentsRail() {
         ))}
       </div>
 
-      {/* Scroll hint */}
       <p className="text-center text-xs text-white/20 mt-6 px-6" aria-hidden="true">
         Drag to explore
       </p>
