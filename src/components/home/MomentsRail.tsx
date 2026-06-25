@@ -6,8 +6,8 @@ import { motion, useReducedMotion } from 'framer-motion'
 const moments = [
   {
     id: 1,
-    label: 'Campaign Launch',
-    caption: 'A debut album campaign reaching 12 million listeners in week one.',
+    label: 'Celebrity Management',
+    caption: 'Representing leading talent and creators in television and the internet for digital, OTT and TV projects.',
     house: 'Bombay Dreams',
     houseColor: '#a48333',
   },
