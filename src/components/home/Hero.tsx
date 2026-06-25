@@ -87,8 +87,7 @@ export default function Hero() {
           className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-12"
           variants={itemVariants}
         >
-          One legal entity. Four operating houses. Built to take human
-          potential further.
+          One Dynasty. Four power houses. Built to further human potential.
         </motion.p>
 
         {/* House colour indicators */}
