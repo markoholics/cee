@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { supabase } from '@/lib/supabase'
 
-// TODO: wire to email provider (Resend, SendGrid, or similar) before launch
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -13,17 +13,27 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: replace with real email dispatch
-    console.log('[Contact form submission]', {
-      name,
-      email,
-      message,
-      house: house || 'General CEE',
-      timestamp: new Date().toISOString(),
-    })
+    const { error } = await supabase
+      .from('cee_enquiries')
+      .insert({
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        house: house || 'general',
+        message: message.trim(),
+        status: 'new',
+      })
+
+    if (error) {
+      console.error('[Supabase insert error]', error)
+      return NextResponse.json(
+        { error: 'Could not save your enquiry. Please try again.' },
+        { status: 500 }
+      )
+    }
 
     return NextResponse.json({ success: true })
-  } catch {
+  } catch (err) {
+    console.error('[Contact route error]', err)
     return NextResponse.json(
       { error: 'Something went wrong. Please try again.' },
       { status: 500 }
