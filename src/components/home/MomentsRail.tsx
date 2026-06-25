@@ -7,7 +7,7 @@ const moments = [
   {
     id: 1,
     label: 'Celebrity Management',
-    caption: 'Representing leading talent and creators in television and the internet for digital, OTT and TV projects.',
+    caption: 'Representing leading actors and creators in television and the internet for varied projects.',
     house: 'Bombay Dreams',
     houseColor: '#a48333',
   },
