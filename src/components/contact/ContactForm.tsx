@@ -1,19 +1,147 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
+import { CheckCircle2, AlertCircle, Loader2, ChevronDown } from 'lucide-react'
 
 const houseOptions = [
-  { value: 'bombay-dreams', label: 'Bombay Dreams — Talent and Entertainment' },
-  { value: 'brandoscopy', label: 'Brandoscopy — Growth and Marketing' },
-  { value: 'labl-co', label: 'Labl.co — Commerce and IP' },
-  { value: 'h2ai-technologies', label: 'H²AI Technologies — AI and Future Skills' },
-  { value: 'general', label: 'General enquiry — not sure yet' },
+  {
+    value: 'bombay-dreams',
+    label: 'Bombay Dreams',
+    sub: 'Talent and Entertainment',
+    color: '#a48333',
+  },
+  {
+    value: 'brandoscopy',
+    label: 'Brandoscopy',
+    sub: 'Growth and Marketing',
+    color: '#5f101c',
+  },
+  {
+    value: 'labl-co',
+    label: 'Labl.co',
+    sub: 'Commerce and IP',
+    color: '#b28442',
+  },
+  {
+    value: 'h2ai-technologies',
+    label: 'H²AI Technologies',
+    sub: 'AI and Future Skills',
+    color: '#3c82f5',
+  },
+  {
+    value: 'general',
+    label: 'General enquiry',
+    sub: 'Not sure yet',
+    color: '#ffffff',
+  },
 ]
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
+
+function HouseSelect({
+  value,
+  onChange,
+  error,
+}: {
+  value: string
+  onChange: (val: string) => void
+  error?: string
+}) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  const selected = houseOptions.find((o) => o.value === value)
+
+  // Close on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
+  return (
+    <div ref={ref} className="relative">
+      {/* Trigger */}
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="w-full bg-white/[0.03] border border-white/10 px-4 py-3 text-sm text-left flex items-center justify-between gap-3 focus:outline-none focus:border-white/30 transition-colors duration-200"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="Select a house"
+      >
+        {selected ? (
+          <span className="flex items-center gap-3">
+            <span
+              className="w-2 h-2 rounded-full flex-shrink-0"
+              style={{ backgroundColor: selected.color }}
+              aria-hidden="true"
+            />
+            <span className="text-white">{selected.label}</span>
+            <span className="text-white/40 hidden sm:inline">— {selected.sub}</span>
+          </span>
+        ) : (
+          <span className="text-white/25">Select a house...</span>
+        )}
+        <ChevronDown
+          size={16}
+          className={`text-white/40 flex-shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          aria-hidden="true"
+        />
+      </button>
+
+      {/* Dropdown panel */}
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.15 }}
+            role="listbox"
+            aria-label="House options"
+            className="absolute z-50 top-full left-0 right-0 mt-1 bg-[#141414] border border-white/10 overflow-hidden shadow-2xl"
+          >
+            {houseOptions.map((opt) => (
+              <li
+                key={opt.value}
+                role="option"
+                aria-selected={value === opt.value}
+                onClick={() => {
+                  onChange(opt.value)
+                  setOpen(false)
+                }}
+                className="flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-white/5 transition-colors duration-150 group"
+              >
+                <span
+                  className="w-2 h-2 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: opt.color }}
+                  aria-hidden="true"
+                />
+                <span className="text-white text-sm font-medium">{opt.label}</span>
+                <span className="text-white/40 text-xs ml-1">— {opt.sub}</span>
+                {value === opt.value && (
+                  <span className="ml-auto text-white/60 text-xs">Selected</span>
+                )}
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+
+      {error && (
+        <p id="house-error" className="text-xs text-red-400 mt-1.5" role="alert">
+          {error}
+        </p>
+      )}
+    </div>
+  )
+}
 
 export default function ContactForm() {
   const searchParams = useSearchParams()
@@ -51,7 +179,7 @@ export default function ContactForm() {
   }
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target
     setFields((f) => ({ ...f, [name]: value }))
@@ -91,20 +219,19 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    'w-full bg-white/[0.03] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-bombay/60 transition-colors duration-200'
+    'w-full bg-white/[0.03] border border-white/10 px-4 py-3 text-sm text-white placeholder-white/25 focus:outline-none focus:border-white/30 transition-colors duration-200'
   const labelClasses = 'block text-xs font-semibold uppercase tracking-widest text-white/40 mb-2'
-  const errorClasses = 'text-xs text-labl mt-1.5'
 
   if (formState === 'success') {
     return (
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex flex-col items-start gap-4 p-8 border border-bombay/30 bg-bombay/5"
+        className="flex flex-col items-start gap-4 p-8 border border-white/20 bg-white/[0.03]"
         role="alert"
         aria-live="polite"
       >
-        <CheckCircle2 size={32} className="text-bombay" aria-hidden="true" />
+        <CheckCircle2 size={32} className="text-white" aria-hidden="true" />
         <div>
           <h3 className="font-display text-2xl font-black text-white mb-2">
             Message received.
@@ -140,7 +267,7 @@ export default function ContactForm() {
             aria-invalid={!!errors.name}
           />
           {errors.name && (
-            <p id="name-error" className={errorClasses} role="alert">
+            <p id="name-error" className="text-xs text-red-400 mt-1.5" role="alert">
               {errors.name}
             </p>
           )}
@@ -165,41 +292,25 @@ export default function ContactForm() {
             aria-invalid={!!errors.email}
           />
           {errors.email && (
-            <p id="email-error" className={errorClasses} role="alert">
+            <p id="email-error" className="text-xs text-red-400 mt-1.5" role="alert">
               {errors.email}
             </p>
           )}
         </div>
 
-        {/* House */}
+        {/* House — custom dropdown */}
         <div>
-          <label htmlFor="house" className={labelClasses}>
+          <label className={labelClasses}>
             Which house?
           </label>
-          <select
-            id="house"
-            name="house"
+          <HouseSelect
             value={fields.house}
-            onChange={handleChange}
-            className={`${inputClasses} appearance-none`}
-            aria-required="true"
-            aria-describedby={errors.house ? 'house-error' : undefined}
-            aria-invalid={!!errors.house}
-          >
-            <option value="" disabled>
-              Select a house...
-            </option>
-            {houseOptions.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
-          {errors.house && (
-            <p id="house-error" className={errorClasses} role="alert">
-              {errors.house}
-            </p>
-          )}
+            onChange={(val) => {
+              setFields((f) => ({ ...f, house: val }))
+              if (errors.house) setErrors((er) => ({ ...er, house: undefined }))
+            }}
+            error={errors.house}
+          />
         </div>
 
         {/* Message */}
@@ -220,7 +331,7 @@ export default function ContactForm() {
             aria-invalid={!!errors.message}
           />
           {errors.message && (
-            <p id="message-error" className={errorClasses} role="alert">
+            <p id="message-error" className="text-xs text-red-400 mt-1.5" role="alert">
               {errors.message}
             </p>
           )}
@@ -233,12 +344,12 @@ export default function ContactForm() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="flex items-start gap-3 p-4 border border-labl/30 bg-labl/5"
+              className="flex items-start gap-3 p-4 border border-white/20 bg-white/5"
               role="alert"
               aria-live="assertive"
             >
-              <AlertCircle size={16} className="text-labl flex-shrink-0 mt-0.5" aria-hidden="true" />
-              <p className="text-sm text-labl">{errorMessage}</p>
+              <AlertCircle size={16} className="text-white flex-shrink-0 mt-0.5" aria-hidden="true" />
+              <p className="text-sm text-white/80">{errorMessage}</p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -247,7 +358,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={formState === 'submitting'}
-          className="w-full bg-bombay text-base px-6 py-4 text-sm font-semibold transition-all duration-200 hover:bg-bombay-light active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full bg-white text-black px-6 py-4 text-sm font-semibold transition-all duration-200 hover:bg-white/90 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {formState === 'submitting' ? (
             <>
