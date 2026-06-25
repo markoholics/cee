@@ -76,7 +76,7 @@ export const convictionQuotes = [
     attribution: 'H²AI Technologies',
   },
   {
-    quote: 'The best celebrity brand is one the talent would buy themselves.',
+    quote: 'The best celebrity brand is one that sells itself.',
     attribution: 'Labl.co',
   },
 ]

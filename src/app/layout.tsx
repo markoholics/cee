@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import LenisProvider from '@/components/layout/LenisProvider'
+import RotatePrompt from '@/components/ui/RotatePrompt'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -66,6 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB" suppressHydrationWarning className={`${fraunces.variable} ${inter.variable}`}>
       <body className="bg-base text-white font-body antialiased">
+        <RotatePrompt />
         <LenisProvider>
           <Navigation />
           <main>{children}</main>

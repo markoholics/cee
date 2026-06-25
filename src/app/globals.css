@@ -132,6 +132,19 @@ html.lenis {
 .border-house-labl { border-color: #b28442; }
 .border-house-h2ai { border-color: #3c82f5; }
 
+/* Rotate prompt phone animation */
+@keyframes rotatePhone {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(0deg); }
+  60%  { transform: rotate(-90deg); }
+  85%  { transform: rotate(-90deg); }
+  100% { transform: rotate(0deg); }
+}
+.rotate-phone-anim {
+  animation: rotatePhone 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
 /* Horizontal scroll container */
 .hide-scrollbar {
   -ms-overflow-style: none;
