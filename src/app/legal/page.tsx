@@ -89,9 +89,7 @@ export default function LegalPage() {
               <p>
                 You have the right to access, correct and delete any personal
                 data we hold about you. To exercise these rights, please contact
-                us at{' '}
-                {/* PLACEHOLDER: insert legal contact email */}
-                <span className="text-white/40">[legal contact email to be confirmed]</span>.
+                us at office@theceecompany.com.
               </p>
             </div>
 
@@ -150,9 +148,7 @@ export default function LegalPage() {
               <h3 className="text-white font-semibold mb-3">4. Governing law</h3>
               <p>
                 These terms are governed by the laws of India. Any disputes
-                shall be subject to the exclusive jurisdiction of courts in
-                {/* PLACEHOLDER: insert jurisdiction city */}
-                  {' '}<span className="text-white">India</span>.
+                shall be subject to the exclusive jurisdiction of courts in India.
               </p>
             </div>
 
