@@ -7,7 +7,7 @@ import HouseDiagram from '@/components/about/HouseDiagram'
 export const metadata: Metadata = {
   title: 'About CEE | Creative Entertainment Enterprises',
   description:
-    'The story behind Creative Entertainment Enterprises Pvt Ltd. Four Houses. One Dynasty. Built to further human potential.',
+    'The story behind Creative Entertainment Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.',
 }
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
             About CEE
           </p>
           <h1 className="font-display text-5xl md:text-7xl font-black text-white leading-none mb-8">
-            Four Houses.<br />One Dynasty.
+            Five Houses.<br />One Dynasty.
           </h1>
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
             Creative Entertainment Enterprises Pvt Ltd was built on a single conviction:
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 commerce business that does not understand the mechanics of fame.
               </p>
               <p className="text-white/60 leading-relaxed">
-                CEE was designed from day one to hold all four. Not as a
+                CEE was designed from day one to hold all five. Not as a
                 conglomerate, but as an integrated operating system where insight
                 from one house makes every other house smarter.
               </p>
@@ -68,14 +68,14 @@ export default function AboutPage() {
       </section>
 
       {/* Four houses diagram */}
-      <section className="py-24 border-b border-white/5" aria-label="The four houses">
+      <section className="py-24 border-b border-white/5" aria-label="The five houses">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/30 mb-4">
               Structure
             </p>
             <h2 className="font-display text-3xl md:text-5xl font-black text-white">
-              Four Houses. One Dynasty.
+              Five Houses. One Dynasty.
             </h2>
           </div>
 

@@ -87,20 +87,21 @@ export default function Hero() {
           className="text-base md:text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-12"
           variants={itemVariants}
         >
-          One Dynasty. Four power houses. Built to further human potential.
+          One Dynasty. Five power houses. Built to further human potential.
         </motion.p>
 
         {/* House colour indicators */}
         <motion.div
           className="flex items-center justify-center gap-4 mb-12"
           variants={itemVariants}
-          aria-label="Four houses colour indicator"
+          aria-label="Five houses colour indicator"
         >
           {[
             { color: '#a48333', label: 'Bombay Dreams' },
             { color: '#5f101c', label: 'Brandoscopy' },
             { color: '#b28442', label: 'Labl.co' },
             { color: '#3c82f5', label: 'H²AI Technologies' },
+            { color: '#6b7280', label: 'Markoholics' },
           ].map(({ color, label }) => (
             <span
               key={label}

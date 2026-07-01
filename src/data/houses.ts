@@ -91,66 +91,66 @@ export const houses: House[] = [
   {
     id: 'brandoscopy',
     name: 'Brandoscopy',
-    tagline: 'Growth and Marketing House',
+    tagline: 'Personal and Luxury Brand Studio',
     description:
-      'Growth without guesswork. Brandoscopy brings together marketing strategy, demand generation and revenue operations to build systems that compound over time.',
+      'We sculpt personal and luxury brands. Five kinds of work. One standard. The studio remains intentionally small — a tight team taking no more than a handful of commissions a year. This is not scalability. This is craft.',
     accentColor: '#5f101c',
     accentClass: 'brandoscopy',
     href: '/brandoscopy',
     externalHref: 'https://www.brandoscopy.in/',
     services: [
       {
-        title: 'Marketing Consulting',
+        title: 'Celebrities',
         description:
-          'Diagnose the real constraint in your marketing engine and build a roadmap that leadership can fund and a team can execute.',
-        icon: 'LineChart',
+          'Personal brand architecture for Indian television names, film actors, and cultural figures whose reputation has outgrown their media presence.',
+        icon: 'Star',
       },
       {
-        title: 'Demand Generation',
+        title: 'Founders',
         description:
-          'Multi-channel programmes that fill the pipeline with qualified buyers, not just leads that never close.',
-        icon: 'TrendingUp',
+          'Positioning and narrative strategy for entrepreneurs and business leaders who need to operate as both operator and public figure simultaneously.',
+        icon: 'Briefcase',
       },
       {
-        title: 'Growth Marketing Services',
+        title: 'Luxury Houses',
         description:
-          'Rapid experimentation across channels, creative and positioning to find what scales — then scale it hard.',
-        icon: 'Zap',
+          'Brand identity and editorial direction for hospitality groups, interiors studios, and lifestyle brands that sit at the top of their category.',
+        icon: 'Gem',
       },
       {
-        title: 'CRM and Lifecycle Marketing',
+        title: 'Heritage Brands',
         description:
-          'Onboarding flows, retention sequences and re-engagement campaigns that treat customers as an asset, not an afterthought.',
-        icon: 'Users',
+          'Reinvention strategy and modern editorial identity for houses with legacy to preserve and new audiences to reach — without losing what made them.',
+        icon: 'Landmark',
       },
       {
-        title: 'Revenue Operations',
+        title: 'Cultural Icons',
         description:
-          'Align sales, marketing and customer success around the metrics that matter, with the tooling and processes to match.',
-        icon: 'Settings2',
+          'Long-horizon reputation strategy for public figures whose influence spans industries, geographies, and the cultural conversation itself.',
+        icon: 'Crown',
       },
     ],
     icp: [
       {
-        label: 'Scale-up founders',
+        label: 'Celebrities and public figures',
         description:
-          'Series A and B companies that have found product-market fit and need repeatable, scalable growth systems.',
+          'Indian television names, film actors and cultural figures whose reputation has outgrown their current media presence.',
       },
       {
-        label: 'CMOs inheriting broken infrastructure',
+        label: 'Founders and executives',
         description:
-          'Marketing leaders joining companies with fragmented tech, unclear attribution and stalled pipeline.',
+          'Entrepreneurs and business leaders who need to operate as both operator and public figure simultaneously.',
       },
       {
-        label: 'Enterprise teams modernising',
+        label: 'Luxury and heritage brands',
         description:
-          'Large organisations moving from traditional advertising to performance-led, data-driven marketing.',
+          'Hospitality groups, lifestyle brands and legacy houses seeking brand identity, editorial direction or modern reinvention.',
       },
     ],
     stats: [
-      { value: '3x', label: 'Average pipeline increase' },
-      { value: '80+', label: 'Growth engagements' },
-      { value: '40%', label: 'Average CAC reduction' },
+      { value: 'Handful', label: 'Commissions per year' },
+      { value: '5', label: 'Types of work' },
+      { value: '1', label: 'Standard' },
     ],
   },
   {
@@ -289,7 +289,7 @@ export const houses: House[] = [
     tagline: 'GTM and Growth House',
     description:
       'Go-to-market strategy and growth execution for tech startups and enterprises. Markoholics helps companies find their market, build their motion, and scale with precision.',
-    accentColor: '#e63329',
+    accentColor: '#6b7280',
     accentClass: 'markoholics',
     href: '/markoholics',
     externalHref: 'https://www.markoholics.com/',

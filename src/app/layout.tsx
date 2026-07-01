@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | CEE',
   },
   description:
-    'Creative Entertainment Enterprises Pvt Ltd. One Dynasty. Four power houses. Talent, growth, commerce and AI built to further human potential.',
+    'Creative Entertainment Enterprises Pvt Ltd. One Dynasty. Five power houses. Talent, growth, commerce and AI built to further human potential.',
   keywords: [
     'talent management',
     'entertainment',
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: 'Creative Entertainment Enterprises',
     title: 'Creative Entertainment Enterprises | CEE',
     description:
-      'One Dynasty. Four power houses. Built to further human potential.',
+      'One Dynasty. Five power houses. Built to further human potential.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Creative Entertainment Enterprises | CEE',
     description:
-      'One Dynasty. Four power houses. Built to further human potential.',
+      'One Dynasty. Five power houses. Built to further human potential.',
   },
   robots: {
     index: true,

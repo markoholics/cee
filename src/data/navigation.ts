@@ -43,7 +43,7 @@ export const navItems: NavItem[] = [
   {
     label: 'Markoholics',
     href: 'https://www.markoholics.com/',
-    accentColor: '#e63329',
+    accentColor: '#6b7280',
     accentClass: 'markoholics',
     isHouse: true,
     external: true,

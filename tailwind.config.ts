@@ -37,9 +37,9 @@ const config: Config = {
           dark: '#1a5fd4',
         },
         'markoholics': {
-          DEFAULT: '#e63329',
-          light: '#ff5a50',
-          dark: '#b8221a',
+          DEFAULT: '#6b7280',
+          light: '#9ca3af',
+          dark: '#4b5563',
         },
       },
       fontFamily: {

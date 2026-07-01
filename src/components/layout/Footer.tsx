@@ -22,7 +22,7 @@ export default function Footer() {
               <LogoMark size={80} />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Creative Entertainment Enterprises Pvt Ltd. Four Houses. One Dynasty. Built to further human potential.
+              Creative Entertainment Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.
             </p>
           </div>
 

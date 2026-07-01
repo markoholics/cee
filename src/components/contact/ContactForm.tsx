@@ -34,7 +34,7 @@ const houseOptions = [
     value: 'markoholics',
     label: 'Markoholics',
     sub: 'GTM and Growth',
-    color: '#e63329',
+    color: '#6b7280',
   },
   {
     value: 'general',

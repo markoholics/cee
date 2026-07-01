@@ -46,9 +46,9 @@ export default function ContactPage() {
                   },
                   {
                     name: 'Brandoscopy',
-                    tagline: 'Growth and Marketing',
+                    tagline: 'Personal and Luxury Brand Studio',
                     color: '#5f101c',
-                    desc: 'Marketing consulting, demand generation, growth, CRM, RevOps.',
+                    desc: 'Personal brand architecture, founder positioning, luxury brand identity, heritage reinvention.',
                   },
                   {
                     name: 'Labl.co',
@@ -65,7 +65,7 @@ export default function ContactPage() {
                   {
                     name: 'Markoholics',
                     tagline: 'GTM and Growth',
-                    color: '#e63329',
+                    color: '#6b7280',
                     desc: 'GTM strategy, growth advisory and execution for tech startups and enterprises.',
                   },
                 ].map((h) => (
