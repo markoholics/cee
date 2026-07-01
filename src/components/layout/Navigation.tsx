@@ -199,12 +199,14 @@ export default function Navigation() {
                         className="block text-xs font-medium mt-1 opacity-60"
                         style={item.accentColor ? { color: item.accentColor } : undefined}
                       >
-                        {item.href === '/bombay-dreams'
+                        {item.href === 'https://www.bombaydreams.co.in/'
                           ? 'Talent and Entertainment'
-                          : item.href === '/brandoscopy'
+                          : item.href === 'https://www.brandoscopy.in/'
                           ? 'Growth and Marketing'
-                          : item.href === '/labl-co'
+                          : item.href === 'https://labl.co.in/'
                           ? 'Commerce and IP'
+                          : item.href === 'https://www.markoholics.com/'
+                          ? 'GTM and Growth'
                           : 'AI and Future Skills'}
                       </span>
                     )}

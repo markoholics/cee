@@ -62,6 +62,12 @@ export default function ContactPage() {
                     color: '#3c82f5',
                     desc: 'AI education, consulting, workshops, certifications, strategy.',
                   },
+                  {
+                    name: 'Markoholics',
+                    tagline: 'GTM and Growth',
+                    color: '#e63329',
+                    desc: 'GTM strategy, growth advisory and execution for tech startups and enterprises.',
+                  },
                 ].map((h) => (
                   <div key={h.name} className="flex gap-4">
                     <div

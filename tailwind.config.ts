@@ -36,6 +36,11 @@ const config: Config = {
           light: '#6ba0f7',
           dark: '#1a5fd4',
         },
+        'markoholics': {
+          DEFAULT: '#e63329',
+          light: '#ff5a50',
+          dark: '#b8221a',
+        },
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

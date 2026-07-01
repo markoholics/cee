@@ -283,6 +283,65 @@ export const houses: House[] = [
       { value: '94%', label: 'Learner satisfaction' },
     ],
   },
+  {
+    id: 'markoholics',
+    name: 'Markoholics',
+    tagline: 'GTM and Growth House',
+    description:
+      'Go-to-market strategy and growth execution for tech startups and enterprises. Markoholics helps companies find their market, build their motion, and scale with precision.',
+    accentColor: '#e63329',
+    accentClass: 'markoholics',
+    href: '/markoholics',
+    externalHref: 'https://www.markoholics.com/',
+    services: [
+      {
+        title: 'GTM Strategy',
+        description:
+          'Full go-to-market blueprints for product launches, market entry and expansion — built around your ICP, not a generic playbook.',
+        icon: 'Map',
+      },
+      {
+        title: 'Growth Strategy',
+        description:
+          'Structured growth frameworks that identify your highest-leverage channels and build compounding momentum over time.',
+        icon: 'TrendingUp',
+      },
+      {
+        title: 'Startup Growth Advisory',
+        description:
+          'Hands-on advisory for early and growth-stage startups navigating their first scalable acquisition and retention loops.',
+        icon: 'Rocket',
+      },
+      {
+        title: 'Enterprise Growth Consulting',
+        description:
+          'Large-organisation growth programmes that cut through internal complexity and drive measurable revenue outcomes.',
+        icon: 'Building2',
+      },
+    ],
+    icp: [
+      {
+        label: 'Tech startups pre-Series B',
+        description:
+          'Founders who have built the product and need a clear, executable go-to-market strategy to acquire their first hundred customers at scale.',
+      },
+      {
+        label: 'Enterprises launching new products',
+        description:
+          'Large companies that need external growth expertise to move faster than their internal teams can manage alone.',
+      },
+      {
+        label: 'Investors and accelerators',
+        description:
+          'Funds seeking growth support for portfolio companies at critical inflection points.',
+      },
+    ],
+    stats: [
+      { value: '60+', label: 'GTM strategies delivered' },
+      { value: '3x', label: 'Average pipeline growth' },
+      { value: '40+', label: 'Startups advised' },
+    ],
+  },
 ]
 
 export const houseById = (id: string): House | undefined =>
