@@ -87,4 +87,8 @@ export const convictionQuotes = [
     quote: 'The best celebrity brand is one that sells itself.',
     attribution: 'Labl.co',
   },
+  {
+    quote: 'Most startups do not fail because the product is wrong. They fail because the market never heard of it.',
+    attribution: 'Markoholics',
+  },
 ]
