@@ -22,7 +22,7 @@ export default function Footer() {
               <LogoMark size={80} />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Creative Entertainment Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.
+              Creative Engineering Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="text-white/25 text-xs">
-            &copy; {new Date().getFullYear()} Creative Entertainment Enterprises
+            &copy; {new Date().getFullYear()} Creative Engineering Enterprises
             Pvt Ltd. All rights reserved.
           </p>
           <div className="flex gap-6">

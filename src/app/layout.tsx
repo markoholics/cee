@@ -20,11 +20,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Creative Entertainment Enterprises | CEE',
+    default: 'Creative Engineering Enterprises | CEE',
     template: '%s | CEE',
   },
   description:
-    'Creative Entertainment Enterprises Pvt Ltd. One Dynasty. Five power houses. Talent, growth, commerce and AI built to further human potential.',
+    'Creative Engineering Enterprises Pvt Ltd. One Dynasty. Five power houses. Talent, growth, commerce and AI built to further human potential.',
   keywords: [
     'talent management',
     'entertainment',
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GB',
     url: 'https://theceecompany.com',
-    siteName: 'Creative Entertainment Enterprises',
-    title: 'Creative Entertainment Enterprises | CEE',
+    siteName: 'Creative Engineering Enterprises',
+    title: 'Creative Engineering Enterprises | CEE',
     description:
       'One Dynasty. Five power houses. Built to further human potential.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Creative Entertainment Enterprises | CEE',
+    title: 'Creative Engineering Enterprises | CEE',
     description:
       'One Dynasty. Five power houses. Built to further human potential.',
   },

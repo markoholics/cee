@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Legal | Privacy Policy and Terms of Service',
   description:
-    'Privacy Policy and Terms of Service for Creative Entertainment Enterprises Pvt Ltd.',
+    'Privacy Policy and Terms of Service for Creative Engineering Enterprises Pvt Ltd.',
 }
 
 export default function LegalPage() {
@@ -35,7 +35,7 @@ export default function LegalPage() {
             <div>
               <h3 className="text-white font-semibold mb-3">1. Who we are</h3>
               <p>
-                Creative Entertainment Enterprises Pvt Ltd (&quot;CEE&quot;, &quot;we&quot;, &quot;us&quot;,
+                Creative Engineering Enterprises Pvt Ltd (&quot;CEE&quot;, &quot;we&quot;, &quot;us&quot;,
                 &quot;our&quot;) is a company registered in India. Our registered address
                 will be published here once confirmed. We operate the website at
                 cee.co.in and all subdomain pages associated with our four
@@ -128,7 +128,7 @@ export default function LegalPage() {
               <h3 className="text-white font-semibold mb-3">2. Intellectual property</h3>
               <p>
                 All content on this website, including text, graphics, logos and
-                design, is the property of Creative Entertainment Enterprises
+                design, is the property of Creative Engineering Enterprises
                 Pvt Ltd or its licensors and is protected by applicable
                 intellectual property laws.
               </p>

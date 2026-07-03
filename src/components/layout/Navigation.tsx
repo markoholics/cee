@@ -218,7 +218,7 @@ export default function Navigation() {
             {/* Footer of overlay */}
             <div className="px-8 py-6 border-t border-white/5">
               <p className="text-white/30 text-xs">
-                Creative Entertainment Enterprises Pvt Ltd
+                Creative Engineering Enterprises Pvt Ltd
               </p>
             </div>
           </motion.div>

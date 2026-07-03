@@ -5,9 +5,9 @@ import { houses } from '@/data/houses'
 import HouseDiagram from '@/components/about/HouseDiagram'
 
 export const metadata: Metadata = {
-  title: 'About CEE | Creative Entertainment Enterprises',
+  title: 'About CEE | Creative Engineering Enterprises',
   description:
-    'The story behind Creative Entertainment Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.',
+    'The story behind Creative Engineering Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.',
 }
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
             Five Houses.<br />One Dynasty.
           </h1>
           <p className="text-white/60 text-xl leading-relaxed max-w-2xl">
-            Creative Entertainment Enterprises Pvt Ltd was built on a single conviction:
+            Creative Engineering Enterprises Pvt Ltd was built on a single conviction:
             that talent, brand growth, commerce and intelligence are not separate
             problems. They are one problem, and they deserve one roof.
           </p>

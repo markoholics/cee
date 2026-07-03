@@ -5,7 +5,7 @@ import ContactForm from '@/components/contact/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact CEE | Get in Touch',
   description:
-    'Contact Creative Entertainment Enterprises. Tell us which house you need and we will put the right team in front of you within one business day.',
+    'Contact Creative Engineering Enterprises. Tell us which house you need and we will put the right team in front of you within one business day.',
 }
 
 export default function ContactPage() {

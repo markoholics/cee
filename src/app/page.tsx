@@ -7,7 +7,7 @@ import ProofSection from '@/components/home/ProofSection'
 import HomeCTA from '@/components/home/HomeCTA'
 
 export const metadata: Metadata = {
-  title: 'Creative Entertainment Enterprises | Talent. Brands. Commerce. Intelligence.',
+  title: 'Creative Engineering Enterprises | Talent. Brands. Commerce. Intelligence.',
   description:
     'CEE — Five Houses. One Dynasty. Bombay Dreams (talent), Brandoscopy (luxury brands), Labl.co (commerce), H²AI Technologies (AI) and Markoholics (GTM). Built to further human potential.',
 }
@@ -25,7 +25,7 @@ export default function HomePage() {
             Five Houses. One Dynasty.
           </p>
           <h2 className="font-display text-3xl md:text-5xl font-bold leading-snug text-white/90 max-w-3xl">
-            Creative Entertainment Enterprises Pvt Ltd is the single legal and
+            Creative Engineering Enterprises Pvt Ltd is the single legal and
             commercial entity behind five operating houses. Each house has its
             own identity, leadership and market focus. All built on the same
             conviction: talent, brands, commerce and intelligence belong under

@@ -24,7 +24,7 @@ export default function HouseDiagram({ houses }: { houses: House[] }) {
       <div className="border border-white/15 px-8 py-4 text-center">
         <p className="font-display text-2xl font-black text-white">CEE</p>
         <p className="text-white/40 text-xs mt-1">
-          Creative Entertainment Enterprises Pvt Ltd
+          Creative Engineering Enterprises Pvt Ltd
         </p>
       </div>
 

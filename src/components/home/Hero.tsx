@@ -71,7 +71,7 @@ export default function Hero() {
           className="text-xs font-semibold uppercase tracking-[0.25em] text-white/40 mb-6"
           variants={itemVariants}
         >
-          Creative Entertainment Enterprises
+          Creative Engineering Enterprises
         </motion.p>
 
         <motion.h1
