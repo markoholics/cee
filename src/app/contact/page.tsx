@@ -85,6 +85,21 @@ export default function ContactPage() {
                   </div>
                 ))}
               </div>
+
+              <div className="mt-10 pt-8 border-t border-white/5">
+                <p className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-3">
+                  Registered Office
+                </p>
+                <address className="not-italic text-white/40 text-sm leading-relaxed">
+                  Creative Engineering Enterprises Private Limited
+                  <br />
+                  D No 22, 4th Floor Vijaya, Bank Colony 6 Cross Road,
+                  Banaswadi, Bangalore North, Bangalore &ndash; 560043,
+                  Karnataka
+                  <br />
+                  CIN: U62099KA2026PTC225694
+                </address>
+              </div>
             </div>
 
             {/* Right: form */}

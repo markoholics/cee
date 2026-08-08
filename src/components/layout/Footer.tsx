@@ -24,6 +24,12 @@ export default function Footer() {
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Creative Engineering Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.
             </p>
+            <address className="not-italic text-white/30 text-xs leading-relaxed max-w-xs mt-4">
+              D No 22, 4th Floor Vijaya, Bank Colony 6 Cross Road, Banaswadi,
+              Bangalore North, Bangalore &ndash; 560043, Karnataka
+              <br />
+              CIN: U62099KA2026PTC225694
+            </address>
           </div>
 
           {/* Houses column */}
