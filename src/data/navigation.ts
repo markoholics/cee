@@ -4,36 +4,49 @@ export type NavItem = {
   accentColor?: string
   accentClass?: string
   isHouse?: boolean
+  external?: boolean
 }
 
 export const navItems: NavItem[] = [
   {
     label: 'Bombay Dreams',
-    href: '/bombay-dreams',
-    accentColor: '#D4AF37',
+    href: 'https://www.bombaydreams.co.in/',
+    accentColor: '#a48333',
     accentClass: 'bombay',
     isHouse: true,
+    external: true,
   },
   {
     label: 'Brandoscopy',
-    href: '/brandoscopy',
-    accentColor: '#00D9D4',
+    href: 'https://www.brandoscopy.in/',
+    accentColor: '#5f101c',
     accentClass: 'brandoscopy',
     isHouse: true,
+    external: true,
   },
   {
     label: 'Labl.co',
-    href: '/labl-co',
-    accentColor: '#FF4D6D',
+    href: 'https://labl.co.in/',
+    accentColor: '#b28442',
     accentClass: 'labl',
     isHouse: true,
+    external: true,
   },
   {
     label: 'H²AI',
-    href: '/h2ai-technologies',
-    accentColor: '#7C5CFF',
+    href: 'https://www.humantothepowerofai.com/',
+    accentColor: '#3c82f5',
     accentClass: 'h2ai',
     isHouse: true,
+    external: true,
+  },
+  {
+    label: 'Markoholics',
+    href: 'https://www.markoholics.com/',
+    accentColor: '#6b7280',
+    accentClass: 'markoholics',
+    isHouse: true,
+    external: true,
   },
   {
     label: 'About',
@@ -71,7 +84,11 @@ export const convictionQuotes = [
     attribution: 'H²AI Technologies',
   },
   {
-    quote: 'The best celebrity brand is one the talent would buy themselves.',
+    quote: 'The best celebrity brand is one that sells itself.',
     attribution: 'Labl.co',
+  },
+  {
+    quote: 'Most startups do not fail because the product is wrong. They fail because the market never heard of it.',
+    attribution: 'Markoholics',
   },
 ]

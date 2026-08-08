@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { navItems } from '@/data/navigation'
 import { cn } from '@/lib/utils'
+import LogoMark from '@/components/ui/LogoMark'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
@@ -56,10 +57,10 @@ export default function Navigation() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-display font-black text-2xl tracking-tight text-white hover:opacity-80 transition-opacity"
-            aria-label="CEE — Creative Entertainment Enterprises, go to homepage"
+            className="hover:opacity-80 transition-opacity flex-shrink-0"
+            aria-label="The CEE Company — go to homepage"
           >
-            CEE
+            <LogoMark size={64} />
           </Link>
 
           {/* Desktop nav */}
@@ -70,6 +71,8 @@ export default function Navigation() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
                     className={cn(
                       'relative text-sm font-medium transition-colors duration-200 group',
                       isActive ? 'text-white' : 'text-white/60 hover:text-white'
@@ -147,10 +150,11 @@ export default function Navigation() {
             <div className="flex items-center justify-between px-6 py-5">
               <Link
                 href="/"
-                className="font-display font-black text-2xl tracking-tight text-white"
+                className="hover:opacity-80 transition-opacity"
                 onClick={() => setMobileOpen(false)}
+                aria-label="The CEE Company — go to homepage"
               >
-                CEE
+                <LogoMark size={56} />
               </Link>
               <button
                 onClick={() => setMobileOpen(false)}
@@ -173,6 +177,8 @@ export default function Navigation() {
                   >
                     <Link
                       href={item.href}
+                      target={item.external ? '_blank' : undefined}
+                      rel={item.external ? 'noopener noreferrer' : undefined}
                       className={cn(
                         'block font-display text-3xl font-bold transition-colors duration-200',
                         pathname === item.href
@@ -193,12 +199,14 @@ export default function Navigation() {
                         className="block text-xs font-medium mt-1 opacity-60"
                         style={item.accentColor ? { color: item.accentColor } : undefined}
                       >
-                        {item.href === '/bombay-dreams'
+                        {item.href === 'https://www.bombaydreams.co.in/'
                           ? 'Talent and Entertainment'
-                          : item.href === '/brandoscopy'
+                          : item.href === 'https://www.brandoscopy.in/'
                           ? 'Growth and Marketing'
-                          : item.href === '/labl-co'
+                          : item.href === 'https://labl.co.in/'
                           ? 'Commerce and IP'
+                          : item.href === 'https://www.markoholics.com/'
+                          ? 'GTM and Growth'
                           : 'AI and Future Skills'}
                       </span>
                     )}
@@ -210,7 +218,7 @@ export default function Navigation() {
             {/* Footer of overlay */}
             <div className="px-8 py-6 border-t border-white/5">
               <p className="text-white/30 text-xs">
-                Creative Entertainment Enterprises Pvt Ltd
+                Creative Engineering Enterprises Pvt Ltd
               </p>
             </div>
           </motion.div>

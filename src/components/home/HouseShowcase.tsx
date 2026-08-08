@@ -108,10 +108,12 @@ function HouseSection({ house, index }: { house: typeof houses[0]; index: number
 
             {/* CTA */}
             <Link
-              href={house.href}
+              href={house.externalHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold group transition-colors duration-200"
               style={{ color: house.accentColor }}
-              aria-label={`Explore ${house.name}`}
+              aria-label={`Explore ${house.name} (opens external site)`}
             >
               Explore {house.name}
               <ArrowRight

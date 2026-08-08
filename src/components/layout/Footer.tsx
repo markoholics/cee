@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { navItems } from '@/data/navigation'
+import LogoMark from '@/components/ui/LogoMark'
 
 const houseLinks = navItems.filter((n) => n.isHouse)
 
@@ -15,14 +16,13 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link
               href="/"
-              className="font-display font-black text-3xl text-white block mb-4"
-              aria-label="CEE homepage"
+              className="inline-block mb-5 hover:opacity-80 transition-opacity"
+              aria-label="The CEE Company homepage"
             >
-              CEE
+              <LogoMark size={80} />
             </Link>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-              Creative Entertainment Enterprises Pvt Ltd. One entity. Four
-              operating houses. Built to take human potential further.
+              Creative Engineering Enterprises Pvt Ltd. Five Houses. One Dynasty. Built to further human potential.
             </p>
           </div>
 
@@ -36,8 +36,9 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    target={item.external ? '_blank' : undefined}
+                    rel={item.external ? 'noopener noreferrer' : undefined}
                     className="text-sm text-white/60 hover:text-white transition-colors duration-200"
-                    style={item.accentColor ? { '--accent': item.accentColor } as React.CSSProperties : undefined}
                   >
                     {item.label}
                   </Link>
@@ -109,7 +110,7 @@ export default function Footer() {
           </address>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <p className="text-white/25 text-xs">
-              &copy; {new Date().getFullYear()} Creative Entertainment Enterprises
+              &copy; {new Date().getFullYear()} Creative Engineering Enterprises
               Pvt Ltd. All rights reserved.
             </p>
             <div className="flex gap-6">

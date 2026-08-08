@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Legal | Privacy Policy and Terms of Service',
   description:
-    'Privacy Policy and Terms of Service for Creative Entertainment Enterprises Pvt Ltd.',
+    'Privacy Policy and Terms of Service for Creative Engineering Enterprises Pvt Ltd.',
 }
 
 export default function LegalPage() {
@@ -35,7 +35,7 @@ export default function LegalPage() {
             <div>
               <h3 className="text-white font-semibold mb-3">1. Who we are</h3>
               <p>
-                Creative Entertainment Enterprises Pvt Ltd (&quot;CEE&quot;, &quot;we&quot;, &quot;us&quot;,
+                Creative Engineering Enterprises Pvt Ltd (&quot;CEE&quot;, &quot;we&quot;, &quot;us&quot;,
                 &quot;our&quot;) is a company registered in India. Our registered address
                 will be published here once confirmed. We operate the website at
                 cee.co.in and all subdomain pages associated with our four
@@ -89,9 +89,7 @@ export default function LegalPage() {
               <p>
                 You have the right to access, correct and delete any personal
                 data we hold about you. To exercise these rights, please contact
-                us at{' '}
-                {/* PLACEHOLDER: insert legal contact email */}
-                <span className="text-white/40">[legal contact email to be confirmed]</span>.
+                us at office@theceecompany.com.
               </p>
             </div>
 
@@ -130,7 +128,7 @@ export default function LegalPage() {
               <h3 className="text-white font-semibold mb-3">2. Intellectual property</h3>
               <p>
                 All content on this website, including text, graphics, logos and
-                design, is the property of Creative Entertainment Enterprises
+                design, is the property of Creative Engineering Enterprises
                 Pvt Ltd or its licensors and is protected by applicable
                 intellectual property laws.
               </p>
@@ -150,9 +148,7 @@ export default function LegalPage() {
               <h3 className="text-white font-semibold mb-3">4. Governing law</h3>
               <p>
                 These terms are governed by the laws of India. Any disputes
-                shall be subject to the exclusive jurisdiction of courts in
-                {/* PLACEHOLDER: insert jurisdiction city */}
-                {' '}<span className="text-white/40">[city to be confirmed]</span>.
+                shall be subject to the exclusive jurisdiction of courts in India.
               </p>
             </div>
 

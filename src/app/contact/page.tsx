@@ -5,7 +5,7 @@ import ContactForm from '@/components/contact/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact CEE | Get in Touch',
   description:
-    'Contact Creative Entertainment Enterprises. Tell us which house you need and we will put the right team in front of you within one business day.',
+    'Contact Creative Engineering Enterprises. Tell us which house you need and we will put the right team in front of you within one business day.',
 }
 
 export default function ContactPage() {
@@ -41,26 +41,32 @@ export default function ContactPage() {
                   {
                     name: 'Bombay Dreams',
                     tagline: 'Talent and Entertainment',
-                    color: '#D4AF37',
+                    color: '#a48333',
                     desc: 'Talent management, celebrity partnerships, brand endorsements, events.',
                   },
                   {
                     name: 'Brandoscopy',
-                    tagline: 'Growth and Marketing',
-                    color: '#00D9D4',
-                    desc: 'Marketing consulting, demand generation, growth, CRM, RevOps.',
+                    tagline: 'Personal and Luxury Brand Studio',
+                    color: '#5f101c',
+                    desc: 'Personal brand architecture, founder positioning, luxury brand identity, heritage reinvention.',
                   },
                   {
                     name: 'Labl.co',
                     tagline: 'Commerce and IP',
-                    color: '#FF4D6D',
+                    color: '#b28442',
                     desc: 'Celebrity brands, product development, licensing, e-commerce.',
                   },
                   {
                     name: 'H²AI Technologies',
                     tagline: 'AI and Future Skills',
-                    color: '#7C5CFF',
+                    color: '#3c82f5',
                     desc: 'AI education, consulting, workshops, certifications, strategy.',
+                  },
+                  {
+                    name: 'Markoholics',
+                    tagline: 'GTM and Growth',
+                    color: '#6b7280',
+                    desc: 'GTM strategy, growth advisory and execution for tech startups and enterprises.',
                   },
                 ].map((h) => (
                   <div key={h.name} className="flex gap-4">
