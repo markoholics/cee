@@ -98,24 +98,34 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-white/25 text-xs">
-            &copy; {new Date().getFullYear()} Creative Entertainment Enterprises
-            Pvt Ltd. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link
-              href="/legal"
-              className="text-white/25 text-xs hover:text-white/50 transition-colors duration-200"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/legal"
-              className="text-white/25 text-xs hover:text-white/50 transition-colors duration-200"
-            >
-              Terms of Service
-            </Link>
+        <div className="border-t border-white/5 pt-8 flex flex-col gap-6">
+          <address className="not-italic text-white/25 text-xs leading-relaxed">
+            <span className="block">CREATIVE ENGINEERING ENTERPRISES PRIVATE LIMITED</span>
+            <span className="block">
+              D NO 22, 4th Floor Vijaya, Bank Colony 6 Cross Road, Banaswadi,
+              Bangalore North, Bangalore- 560043, Karnataka
+            </span>
+            <span className="block">CIN: U62099KA2026PTC225694</span>
+          </address>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <p className="text-white/25 text-xs">
+              &copy; {new Date().getFullYear()} Creative Entertainment Enterprises
+              Pvt Ltd. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href="/legal"
+                className="text-white/25 text-xs hover:text-white/50 transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/legal"
+                className="text-white/25 text-xs hover:text-white/50 transition-colors duration-200"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
