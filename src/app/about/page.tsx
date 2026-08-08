@@ -58,9 +58,9 @@ export default function AboutPage() {
                 from one house makes every other house smarter.
               </p>
               <p className="text-white/60 leading-relaxed">
-                We are a private limited company headquartered in India. We work
-                across entertainment, consumer, technology and professional
-                services sectors.
+                We are a private limited company headquartered in Bangalore,
+                Karnataka, India. We work across entertainment, consumer,
+                technology and professional services sectors.
               </p>
             </div>
           </div>

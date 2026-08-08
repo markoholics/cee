@@ -35,11 +35,13 @@ export default function LegalPage() {
             <div>
               <h3 className="text-white font-semibold mb-3">1. Who we are</h3>
               <p>
-                Creative Engineering Enterprises Pvt Ltd (&quot;CEE&quot;, &quot;we&quot;, &quot;us&quot;,
-                &quot;our&quot;) is a company registered in India. Our registered address
-                will be published here once confirmed. We operate the website at
-                cee.co.in and all subdomain pages associated with our four
-                operating houses.
+                Creative Engineering Enterprises Private Limited (&quot;CEE&quot;, &quot;we&quot;,
+                &quot;us&quot;, &quot;our&quot;) is a company registered in India (CIN:
+                U62099KA2026PTC225694), with its registered office at D No 22,
+                4th Floor Vijaya, Bank Colony 6 Cross Road, Banaswadi,
+                Bangalore North, Bangalore &ndash; 560043, Karnataka. We
+                operate the website at cee.co.in and all subdomain pages
+                associated with our operating houses.
               </p>
             </div>
 
